@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+
+    <title>Flask/Bokeh Demo</title>
+
+    {{ js_resources|indent(4)|safe }}
+
+    {{ css_resources|indent(4)|safe }}
+
+    {{ plot_script|indent(4)|safe }}
+    <STYLE type="text/css">
+        BODY {text-align: center}
+    </STYLE>
+  </head>
+  <body>
+    <div style="width: 50%; display: inline-block;"> 
+        {{ plot_div | safe }}
+        {{ plot_script | safe }}
+    </div> 
+    <p> Demonstrates a simple bokeh heat map embedding into a Flask app</p>
+  </body>
+</html>

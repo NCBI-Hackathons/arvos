@@ -1,0 +1,48 @@
+name (-n) - the gene-set indicator i.e. xeno-iea
+aspect (-a) - bp, mf, cc
+
+NOTES on sailfish install
+sudo apt-get install jellyfish
+sudo apt-get install libdivsufsort-dev
+sudo apt-get install libspdlog-dev libtbb-dev libbz2-dev libspdlog-dev libbz2-dev 
+sudo apt-get install cmake -DBOOST_ROOT=/usr/include/boost 
+sudo apt-get install
+sudo apt-get install 
+sudo apt-get install libboost-iostreams-dev
+sudo apt-get install ostree 
+sudo apt-get install 
+
+This is a de-novo assembly example
+
+------------------------------------------------------------------
+Work done before using arvos
+------------------------------------------------------------------
+
+ASSEMBLY
+
+    ~$ python preprocessReads.py
+    ~$ python runTrinity.py
+
+BLAST ASSEMBLY AGAINST SwissProt
+
+    ~$ python runBlast.py
+    ~$ python runBlastParse.py
+    ~$ python runBlastSummarize.py
+    ~$ python showTaxaSummary.py
+
+------------------------------------------------------------------
+Start work with  arvos
+------------------------------------------------------------------
+
+CREATE ALL NECESSARY COUNT FILES
+
+    ~$ runSailfish.py
+    ~$ assembleCountMatrices.py
+
+
+DO ASSOCIATIVE ANALYSIS
+
+    ~$ runDeAnalysis.py
+    ~$ summarizeResultsDE.py	
+
+
